@@ -1,0 +1,11 @@
+C:\Users\19921\Desktop\hook1\hook1\bin\Debug\hook1.exe.config
+C:\Users\19921\Desktop\hook1\hook1\bin\Debug\hook1.exe
+C:\Users\19921\Desktop\hook1\hook1\bin\Debug\hook1.pdb
+C:\Users\19921\Desktop\hook1\hook1\obj\Debug\hook1.csproj.AssemblyReference.cache
+C:\Users\19921\Desktop\hook1\hook1\obj\Debug\hook1.csproj.CoreCompileInputs.cache
+C:\Users\19921\Desktop\hook1\hook1\obj\Debug\hook1.exe
+C:\Users\19921\Desktop\hook1\hook1\obj\Debug\hook1.pdb
+C:\Users\19921\Desktop\hook1\hook1\obj\Debug\hook1.exe.config
+C:\Users\19921\Desktop\hook1\hook1\bin\Debug\WindowsInput.dll
+C:\Users\19921\Desktop\hook1\hook1\bin\Debug\WindowsInput.xml
+C:\Users\19921\Desktop\hook1\hook1\obj\Debug\hook1.csproj.Up2Date
