@@ -94,6 +94,7 @@ namespace hook1
         }
         public void initialXml()
         {
+            int count=0;
             Console.WriteLine("Reading");
             translate = new Dictionary<int, Bond>();
             try
@@ -102,7 +103,8 @@ namespace hook1
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error in reading");
+                Console.WriteLine(ex.Message);
+                return ;
             }
             XmlNode root= xmlDocument.DocumentElement;
             if (root.SelectNodes("Bond").Count == 0) Console.WriteLine("bonds not found");
@@ -114,8 +116,9 @@ namespace hook1
                 b.Starget = bond.SelectSingleNode("Starget").InnerText[0];
                 Console.WriteLine(b.vcode.ToString() + "|" + b.target + "|" + b.Starget);
                 translate.Add(b.vcode,b);
+                count++;
             }
-            Console.WriteLine("Finished");
+            Console.WriteLine("Finished. "+count+" changes has been loaded.");
         }
         public void installHook() {
             initialXml();
@@ -136,7 +139,7 @@ namespace hook1
             Bond b;
             bool succTyping = false;
             translate.TryGetValue(vkCode,out b);
-            if (b!=null&&protector<=1000&& (int)wParam == 256)
+            if (b!=null&&protector<=100000&&(int)wParam == 256)
             {
                 if (Shift() && b.Starget != '\0')
                 {
@@ -163,12 +166,6 @@ namespace hook1
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
         }
-        public void sendKey(byte key)
-        {
-            keybd_event((byte)key, 0, 0, UIntPtr.Zero);
-            keybd_event((byte)key, 0, 0x0002, UIntPtr.Zero);
-        }
-
     }
 
 }
